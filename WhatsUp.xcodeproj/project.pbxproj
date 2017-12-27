@@ -12,6 +12,7 @@
 		4D2642801FF3C85D00399DD4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D26427E1FF3C85D00399DD4 /* Main.storyboard */; };
 		4D2642821FF3C85D00399DD4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D2642811FF3C85D00399DD4 /* Assets.xcassets */; };
 		4D2642851FF3C85D00399DD4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D2642831FF3C85D00399DD4 /* LaunchScreen.storyboard */; };
+		C0CFB952771C701370962120 /* Pods_WhatsUp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B6E040F7924CA75763C52E2 /* Pods_WhatsUp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,9 @@
 		4D2642811FF3C85D00399DD4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4D2642841FF3C85D00399DD4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4D2642861FF3C85D00399DD4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5B08356DCF8901E99DAFA930 /* Pods-WhatsUp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhatsUp.release.xcconfig"; path = "Pods/Target Support Files/Pods-WhatsUp/Pods-WhatsUp.release.xcconfig"; sourceTree = "<group>"; };
+		6B6E040F7924CA75763C52E2 /* Pods_WhatsUp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WhatsUp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D5762B8AC2A76036F1D6CE22 /* Pods-WhatsUp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhatsUp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WhatsUp/Pods-WhatsUp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +33,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C0CFB952771C701370962120 /* Pods_WhatsUp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		256BC14BB6987D44F9BA9140 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6B6E040F7924CA75763C52E2 /* Pods_WhatsUp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		4D26426E1FF3C85D00399DD4 = {
 			isa = PBXGroup;
 			children = (
 				4D2642791FF3C85D00399DD4 /* WhatsUp */,
 				4D2642781FF3C85D00399DD4 /* Products */,
+				76C9C8407918EC28B8EBC677 /* Pods */,
+				256BC14BB6987D44F9BA9140 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +79,15 @@
 			path = WhatsUp;
 			sourceTree = "<group>";
 		};
+		76C9C8407918EC28B8EBC677 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D5762B8AC2A76036F1D6CE22 /* Pods-WhatsUp.debug.xcconfig */,
+				5B08356DCF8901E99DAFA930 /* Pods-WhatsUp.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +95,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4D2642891FF3C85D00399DD4 /* Build configuration list for PBXNativeTarget "WhatsUp" */;
 			buildPhases = (
+				B1A818D1F9892AAA2999A138 /* [CP] Check Pods Manifest.lock */,
 				4D2642731FF3C85D00399DD4 /* Sources */,
 				4D2642741FF3C85D00399DD4 /* Frameworks */,
 				4D2642751FF3C85D00399DD4 /* Resources */,
+				650E42F25849CEEAC32356FB /* [CP] Embed Pods Frameworks */,
+				D9B4F411039AEE06E3A27F90 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -129,6 +156,62 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		650E42F25849CEEAC32356FB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-WhatsUp/Pods-WhatsUp-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/JSQMessagesViewController/JSQMessagesViewController.framework",
+				"${BUILT_PRODUCTS_DIR}/JSQSystemSoundPlayer/JSQSystemSoundPlayer.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JSQMessagesViewController.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JSQSystemSoundPlayer.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WhatsUp/Pods-WhatsUp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B1A818D1F9892AAA2999A138 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WhatsUp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D9B4F411039AEE06E3A27F90 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WhatsUp/Pods-WhatsUp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		4D2642731FF3C85D00399DD4 /* Sources */ = {
@@ -249,8 +332,10 @@
 		};
 		4D26428A1FF3C85D00399DD4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D5762B8AC2A76036F1D6CE22 /* Pods-WhatsUp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = WhatsUp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.higherVisibility.scrolldemo.WhatsUp;
@@ -260,8 +345,10 @@
 		};
 		4D26428B1FF3C85D00399DD4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5B08356DCF8901E99DAFA930 /* Pods-WhatsUp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = WhatsUp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.higherVisibility.scrolldemo.WhatsUp;
